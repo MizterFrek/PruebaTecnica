@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "5ff0ec72-2b32-4b8b-b89c-428d9bb3919c",
+		"name": "Prueba_APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22380002"
+	},
+	"item": [
+		{
+			"name": "CRUD Clientes",
+			"item": [
+				{
+					"name": "Listar Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cliente",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar Cliente específico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cliente/{%ID%}",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cliente",
+								"{%ID%}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "sintaxis: localhost/api/cliente/{&ID&}",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/cliente/'id'",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"cliente",
+										"'id'"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "ejm1: localhost/api/cliente/32",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/cliente",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"cliente"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "ejm2: localhost/api/cliente/59",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/cliente",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"cliente"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Crear Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cliente?nombreComercial=&razonSocial=&rubro&observacion",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cliente"
+							],
+							"query": [
+								{
+									"key": "nombreComercial",
+									"value": ""
+								},
+								{
+									"key": "razonSocial",
+									"value": ""
+								},
+								{
+									"key": "rubro",
+									"value": null
+								},
+								{
+									"key": "observacion",
+									"value": null
+								}
+							]
+						},
+						"description": "El siguiente Endpoint tiene como finalidad crear el registro de un cliente nuevo. Tener en cuenta que si la razón social o el nombre comercial de la empresa ya está registrada, no se podrá volver a crear un registro.\n\nLas variab de entrada son:\n\nnombreComercial: Determina el nombre comercial de la empresa a registrar.\n\nrazonSocial: Determina la Razón Social que tiene la empresa en la Sunat.\n\nrubro: Determina el rubro de la empresa.\n\nobservacion: Determina si es que existe algún dato importante a tomar en consideración sobre la empresa."
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cliente/{%ID%}",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cliente",
+								"{%ID%}"
+							],
+							"query": [
+								{
+									"key": "nombreComercial",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "razonSocial",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "rubro",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "observacion",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "sintaxis: localhost/api/cliente/{&ID&}{%datos&}",
+							"originalRequest": {
+								"method": "PUT",
+								"header": []
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "ejm: localhost/api/cliente/32/{&datos&}",
+							"originalRequest": {
+								"method": "PUT",
+								"header": []
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Eliminar Cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cliente/{%ID%}",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cliente",
+								"{%ID%}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Tabla",
+			"item": [
+				{
+					"name": "Listar Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tabla",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tabla"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
